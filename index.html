@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boldevo | בניית אתרים ודפי נחיתה לעסקים קטנים בישראל</title>
+<meta name="description" content="Boldevo בונה אתרי תדמית ודפי נחיתה לעסקים קטנים ובינוניים בישראל. דף נחיתה ב-0 ₪ בניה + 250 ₪ לחודש. עולה לאוויר תוך 7 ימי עסקים.">
+<meta name="keywords" content="בניית אתרים, דף נחיתה, אתר לעסק, קידום עסקים קטנים, נוכחות דיגיטלית, ישראל">
+<meta name="author" content="Boldevo">
+<link rel="canonical" href="https://boldevo.org/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://boldevo.org/">
+<meta property="og:title" content="Boldevo | בניית אתרים לעסקים קטנים בישראל">
+<meta property="og:description" content="דף נחיתה ב-0 ₪ בניה. עולה לאוויר תוך 7 ימי עסקים. אנחנו בונים, אתה צומח.">
+<meta property="og:locale" content="he_IL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Boldevo | בניית אתרים לעסקים קטנים">
+<meta name="twitter:description" content="דף נחיתה ב-0 ₪ בניה. עולה לאוויר תוך 7 ימי עסקים.">
+<meta name="robots" content="index, follow">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Boldevo",
+  "url": "https://boldevo.org",
+  "telephone": "+972505134567",
+  "description": "סוכנות דיגיטל לבניית אתרים ודפי נחיתה לעסקים קטנים ובינוניים בישראל",
+  "address": {"@type": "PostalAddress", "addressCountry": "IL"},
+  "priceRange": "₪₪",
+  "openingHours": "Mo-Th 09:00-20:00",
+  "sameAs": ["https://boldevo.org"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#ffffff;
+  --bg2:#f7f7f7;
+  --bg3:#f0f0f0;
+  --white:#0a0a0a;
+  --muted:rgba(0,0,0,.38);
+  --border:rgba(0,0,0,.08);
+  --red:#CC0000;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{background:var(--bg);color:var(--white);font-family:'Heebo',sans-serif;overflow-x:hidden;max-width:100vw}
+
+/* PLACEHOLDER STYLE */
+.ph{color:rgba(0,0,0,.2);font-style:italic}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:200;padding:1.4rem 6%;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{font-size:1rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;text-decoration:none;color:#0a0a0a}
+.nav-links{display:flex;gap:.4rem;list-style:none}
+.nav-links a{font-size:.72rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:.32rem .85rem;border:1px solid var(--border);border-radius:999px;transition:color .2s,border-color .2s}
+.nav-links a:hover{color:#0a0a0a;border-color:rgba(0,0,0,.2)}
+.nav-cta{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:#0a0a0a;color:#fff;border:none;padding:.36rem 1.2rem;border-radius:999px;cursor:pointer;transition:opacity .2s}
+.nav-cta:hover{opacity:.75}
+.nav-ig{color:var(--muted);transition:color .2s;display:flex;align-items:center}
+.nav-ig:hover{color:#0a0a0a}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-hamburger span{display:block;width:22px;height:2px;background:#0a0a0a;border-radius:2px;transition:all .3s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;inset:0;top:60px;background:rgba(255,255,255,.97);backdrop-filter:blur(20px);z-index:199;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a,.mobile-menu button{font-size:1.1rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;background:none;border:none;cursor:pointer;font-family:'Heebo',sans-serif}
+.mobile-menu .mob-cta{background:#0a0a0a;color:#fff;padding:.75rem 2.5rem;border-radius:999px;font-size:.85rem}
+
+/* HERO */
+#hero{position:relative;width:100%;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+#canvas{position:absolute;inset:0;width:100%;height:100%}
+.hero-content{position:relative;z-index:10;text-align:center;pointer-events:none;display:flex;flex-direction:column;align-items:center;gap:1.6rem}
+.hero-logo{font-size:clamp(4rem,11vw,9.5rem);font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:linear-gradient(135deg,#fff 0%,#f0f0f0 50%,#fff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 40px rgba(255,255,255,.3));animation:glow 3s ease-in-out infinite alternate}
+@keyframes glow{from{filter:drop-shadow(0 0 30px rgba(255,255,255,.3))}to{filter:drop-shadow(0 0 55px rgba(255,255,255,.55))}}
+.hero-tag{font-size:.72rem;font-weight:400;letter-spacing:.3em;text-transform:uppercase;background:linear-gradient(135deg,#fff,#f0f0f0,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 20px rgba(255,255,255,.4))}
+.hero-btns{display:flex;gap:1rem;pointer-events:auto;margin-top:.4rem}
+.btn-glass{position:relative;padding:.9rem 2.2rem;font-size:.8rem;font-weight:600;letter-spacing:.08em;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;backdrop-filter:blur(20px);cursor:pointer;transition:all .3s var(--ease);text-decoration:none;overflow:hidden}
+.btn-glass::before{content:'';position:absolute;inset:0;border-radius:999px;background:linear-gradient(135deg,rgba(255,255,255,.2),rgba(255,255,255,.05));opacity:0;transition:opacity .3s}
+.btn-glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.4);box-shadow:0 12px 40px rgba(0,0,0,.15)}
+.btn-glass:hover::before{opacity:1}
+.btn-solid{background:#0a0a0a;color:#fff;border-color:#0a0a0a}
+.btn-solid:hover{background:#222;box-shadow:0 12px 40px rgba(0,0,0,.2)}
+
+/* SECTIONS COMMON */
+section{padding:9rem 6%;position:relative}
+.s-num{font-size:.65rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:1rem}
+.s-title{font-size:clamp(2rem,4vw,3.5rem);font-weight:300;letter-spacing:-.02em;line-height:1.15;margin-bottom:1rem;color:#0a0a0a}
+.s-title strong{font-weight:700}
+.s-sub{font-size:.9rem;font-weight:300;color:var(--muted);line-height:1.9;max-width:440px}
+.s-divider{width:100%;height:1px;background:var(--border);margin:0}
+.s-inner{max-width:1140px;margin:0 auto}
+
+/* REVEAL */
+.rev{opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rev.vis{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}
+
+/* ── ABOUT ── */
+#about{background:var(--bg2)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:start;margin-top:5rem}
+.about-text-block{display:flex;flex-direction:column;gap:3rem}
+.about-item{border-top:1px solid var(--border);padding-top:1.5rem}
+.about-item h4{font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#0a0a0a;margin-bottom:.5rem}
+.about-item p{font-size:.85rem;font-weight:300;color:var(--muted);line-height:1.8}
+.about-stats{display:flex;flex-direction:column;gap:2px}
+.stat-card{background:var(--bg3);border:1px solid var(--border);padding:2.5rem;transition:background .2s}
+.stat-card:hover{background:rgba(255,255,255,.03)}
+.stat-n{font-size:4.5rem;font-weight:700;line-height:1;letter-spacing:-.04em;color:#0a0a0a}
+.stat-l{font-size:.68rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:.4rem}
+
+/* ── SERVICES ── */
+#services{background:var(--bg)}
+.srv-grid{display:grid;grid-template-columns:1fr 1fr;margin-top:5rem;border:1px solid var(--border)}
+.srv-card{padding:3.5rem;border-left:1px solid var(--border);transition:background .25s;position:relative}
+.srv-card:first-child{border-left:none}
+.srv-card:hover{background:rgba(255,255,255,.02)}
+.srv-label{font-size:.6rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem;display:flex;align-items:center;gap:.5rem}
+.srv-label::before{content:'';width:12px;height:1px;background:currentColor}
+.srv-card h3{font-size:2rem;font-weight:300;letter-spacing:-.02em;color:#0a0a0a;margin-bottom:1rem}
+.srv-card h3 strong{font-weight:700}
+.srv-card p{font-size:.85rem;font-weight:300;color:var(--muted);line-height:1.8;margin-bottom:2.5rem}
+.srv-price{font-size:3.5rem;font-weight:700;letter-spacing:-.03em;color:#fff;line-height:1}
+.srv-price sub{font-size:.75rem;font-weight:300;vertical-align:middle;color:var(--muted);letter-spacing:.05em}
+.srv-prices{display:flex;flex-direction:column;gap:.6rem;margin:1.5rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.2rem 0}
+.srv-price-row{display:flex;justify-content:space-between;align-items:center}
+.srv-price-label{font-size:.72rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.4)}
+.srv-price-val{font-size:1.5rem;font-weight:700;color:#0a0a0a;letter-spacing:-.02em}
+.srv-price-sub{font-size:.7rem;font-weight:300;color:rgba(0,0,0,.35);letter-spacing:.04em}
+.srv-maint-detail{font-size:.68rem;font-weight:300;color:rgba(0,0,0,.28);line-height:1.7;margin-bottom:2rem}
+.srv-features{list-style:none;display:flex;flex-direction:column;gap:.6rem;border-top:1px solid var(--border);padding-top:1.8rem}
+.srv-features li{font-size:.82rem;font-weight:300;color:var(--muted);display:flex;gap:.7rem;align-items:flex-start}
+.srv-features li::before{content:'—';color:rgba(255,255,255,.2);flex-shrink:0}
+
+/* ── PROCESS ── */
+#process{background:var(--bg2)}
+.proc-timeline{position:relative;display:flex;justify-content:space-between;align-items:center;max-width:500px;margin:4rem auto 0;padding:0 1rem}
+.proc-line{position:absolute;top:50%;left:0;right:0;height:1px;background:var(--border);z-index:0}
+.proc-dot{position:relative;z-index:1;width:48px;height:48px;border-radius:50%;border:1px solid var(--border);background:var(--bg2);display:flex;align-items:center;justify-content:center;transition:all .3s}
+.proc-dot.active{background:#0a0a0a;border-color:#0a0a0a}
+.proc-dot span{font-size:.62rem;font-weight:700;letter-spacing:.1em;color:rgba(0,0,0,.3)}
+.proc-dot.active span{color:#fff}
+.proc-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:2rem;border:1px solid var(--border)}
+.proc-step{padding:3rem;border-left:1px solid var(--border);transition:background .2s}
+.proc-step:first-child{border-left:none}
+.proc-step:hover{background:rgba(0,0,0,.02)}
+.proc-step h4{font-size:.9rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#0a0a0a;margin-bottom:.7rem}
+.proc-step p{font-size:.83rem;font-weight:300;color:var(--muted);line-height:1.8}
+
+/* ── PORTFOLIO ── */
+#portfolio{background:var(--bg)}
+.port-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:5rem;gap:1.5rem}
+.port-card{border:1px solid var(--border);overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s;text-decoration:none;display:block}
+.port-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.08)}
+.port-thumb{height:240px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:2rem;position:relative;overflow:hidden;background:var(--bg2)}
+.port-card:nth-child(1) .port-thumb{background:linear-gradient(135deg,#e8f0e8,#d4e8d4)}
+.port-card:nth-child(2) .port-thumb{background:linear-gradient(135deg,#e8e8f0,#d4d4e8)}
+.port-card:nth-child(3) .port-thumb{background:linear-gradient(135deg,#f0e8e8,#e8d4d4)}
+.port-thumb-num{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:8rem;font-weight:700;letter-spacing:-.04em;color:rgba(0,0,0,.06);line-height:1;transition:color .3s,transform .3s}
+.port-card:hover .port-thumb-num{color:rgba(0,0,0,.12);transform:translate(-50%,-50%) scale(1.1)}
+.port-thumb h4{font-size:1.2rem;font-weight:700;color:#0a0a0a;position:relative;z-index:1;margin-bottom:.3rem}
+.port-thumb p{font-size:.78rem;font-weight:300;color:var(--muted);position:relative;z-index:1}
+.port-info{padding:1.2rem 2rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.port-tag{font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.35)}
+.port-arrow{font-size:1rem;color:rgba(0,0,0,.2);transition:transform .2s,color .2s}
+.port-card:hover .port-arrow{transform:translate(-3px,-3px);color:#0a0a0a}
+
+/* ── CONTACT ── */
+#contact{background:var(--bg2)}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:8rem;align-items:center;margin-top:5rem}
+.ct-title{font-size:clamp(2.5rem,5.5vw,5rem);font-weight:300;letter-spacing:-.03em;line-height:1.05;color:#0a0a0a;margin-bottom:1.8rem}
+.ct-title strong{font-weight:700}
+.ct-sub{font-size:.9rem;font-weight:300;color:var(--muted);line-height:1.9;margin-bottom:2.8rem}
+.ct-details{display:flex;flex-direction:column;gap:0;margin-top:2.5rem;border-top:1px solid var(--border)}
+.ct-detail-item{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;border-bottom:1px solid var(--border)}
+.ct-detail-label{font-size:.68rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:rgba(0,0,0,.35)}
+.ct-detail-val{font-size:.88rem;font-weight:400;color:#0a0a0a;text-decoration:none}
+.ct-form{background:var(--bg2);border:1px solid var(--border);padding:2.5rem}
+.ct-form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.ct-field{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.2rem}
+.ct-field label{font-size:.65rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(0,0,0,.4)}
+.ct-field input,.ct-field textarea{background:#fff;border:1px solid var(--border);padding:.75rem 1rem;font-family:'Heebo',sans-serif;font-size:.85rem;font-weight:300;color:#0a0a0a;outline:none;transition:border-color .2s;resize:none}
+.ct-field input:focus,.ct-field textarea:focus{border-color:rgba(0,0,0,.3)}
+.ct-field input::placeholder,.ct-field textarea::placeholder{color:rgba(0,0,0,.2)}
+.ct-submit{width:100%;padding:1rem;background:#0a0a0a;color:#fff;border:none;font-family:'Heebo',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:opacity .2s;margin-top:.5rem}
+.ct-submit:hover{opacity:.8}
+
+/* SKIP LINK */
+.skip-link{position:absolute;top:-100px;right:0;background:#0a0a0a;color:#fff;padding:.5rem 1rem;font-size:.8rem;z-index:9999;transition:top .2s}
+.skip-link:focus{top:0}
+
+/* ── FOOTER ── */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.f-logo{font-size:.95rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;text-decoration:none;color:#0a0a0a}
+footer p{font-size:.72rem;font-weight:300;color:rgba(0,0,0,.3);letter-spacing:.06em}
+.f-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+.f-links a{font-size:.7rem;font-weight:300;color:rgba(0,0,0,.4);text-decoration:none;transition:color .2s}
+.f-links a:hover{color:#0a0a0a}
+
+/* MODALS */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9000;align-items:center;justify-content:center;padding:1rem}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;max-width:580px;width:100%;padding:3rem;position:relative;max-height:82vh;overflow-y:auto;direction:rtl}
+.modal-box h2{font-size:1.2rem;font-weight:700;color:#0a0a0a;margin-bottom:1.5rem;letter-spacing:-.01em}
+.modal-box h3{font-size:.85rem;font-weight:700;color:#0a0a0a;margin:1.4rem 0 .4rem;text-transform:uppercase;letter-spacing:.08em}
+.modal-box p{font-size:.83rem;font-weight:300;color:#444;line-height:1.9;margin-bottom:.6rem}
+.modal-close{position:absolute;top:1rem;left:1rem;background:none;border:none;font-size:1.2rem;cursor:pointer;color:rgba(0,0,0,.4);padding:.3rem}
+
+/* WAB */
+.wab{position:fixed;bottom:2rem;left:2rem;z-index:500;background:#0a0a0a;color:#fff;padding:.7rem 1.5rem;border-radius:999px;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:opacity .2s,transform .2s;box-shadow:0 6px 24px rgba(255,255,255,.12)}
+.wab:hover{opacity:.88;transform:translateY(-2px)}
+
+/* MOBILE */
+@media(max-width:860px){
+  .nav-links,.nav-cta,.nav-ig{display:none}
+  .nav-hamburger{display:flex}
+  nav{padding:1rem 5%}
+  .about-grid,.srv-grid,.ct-grid,.ct-form-row{grid-template-columns:1fr}
+  .ct-grid{gap:3rem}
+  .ct-form{padding:1.5rem;width:100%;box-sizing:border-box}
+  .ct-detail-item{flex-wrap:wrap;gap:.3rem}
+  section,.s-inner,nav,footer{max-width:100vw;box-sizing:border-box}
+  footer{flex-direction:column;align-items:flex-start;gap:.75rem}
+  .foot-links{flex-wrap:wrap;gap:.5rem}
+  .proc-grid,.port-grid{grid-template-columns:1fr}
+  .srv-card,.proc-step,.port-card{border-left:none!important;border-top:1px solid var(--border)}
+  .srv-card:first-child,.proc-step:first-child,.port-card:first-child{border-top:none}
+  #hero{height:100svh}
+  #canvas{width:100%!important;height:100%!important;max-width:100vw}
+  .hero-content{width:90%;max-width:100%}
+  .hero-logo{font-size:clamp(3rem,18vw,5rem)!important}
+  .hero-btns{flex-direction:column;align-items:center;width:100%;gap:.75rem;margin-top:7rem}
+  .btn-glass{width:80%;text-align:center;padding:.85rem 1.5rem}
+  section{padding:5rem 6%}
+  .s-inner{padding:0}
+  .proc-timeline{flex-direction:column;gap:2rem;max-width:200px}
+  .proc-line{display:none}
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">דלג לתוכן הראשי</a>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">BOLDEVO</a>
+  <ul class="nav-links">
+    <li><a href="#about">מי אנחנו</a></li>
+    <li><a href="#services">שירותים</a></li>
+    <li><a href="#process">תהליך</a></li>
+    <li><a href="#portfolio">עבודות</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:.8rem">
+    <a href="#" target="_blank" class="nav-ig" title="Instagram">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">צור קשר</button>
+    <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="תפריט">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">מי אנחנו</a>
+  <a href="#services" onclick="toggleMenu()">שירותים</a>
+  <a href="#process" onclick="toggleMenu()">תהליך</a>
+  <a href="#portfolio" onclick="toggleMenu()">עבודות</a>
+  <a href="#" target="_blank" onclick="toggleMenu()">Instagram</a>
+  <button class="mob-cta" onclick="toggleMenu();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">צור קשר</button>
+</div>
+
+<!-- HERO -->
+<section id="hero" id="main">
+  <canvas id="canvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-logo">BOLDEVO</div>
+    <p class="hero-tag">אנחנו בונים, אתה צומח.</p>
+    <div class="hero-btns">
+      <a href="#services" class="btn-glass btn-solid">הצג שירותים</a>
+      <a href="#contact" class="btn-glass">דבר איתנו</a>
+    </div>
+  </div>
+</section>
+
+<div class="s-divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="s-inner">
+    <div class="s-num rev">01</div>
+    <h2 class="s-title rev d1"><strong>הקמנו את Boldevo כי האמנו</strong><br>שמשהו צריך להשתנות.</h2>
+    <p class="s-sub rev d2">שני לוחמים משוחררים שראו עסקים קטנים בישראל נשארים מאחור בעידן הדיגיטל — והחלטנו לקחת על עצמנו לעזור להם. לא מתוך עסק, מתוך אמונה.</p>
+
+    <div class="about-grid">
+      <div class="about-text-block">
+        <div class="about-item rev d1">
+          <h4>באים לעזור, לא למכור</h4>
+          <p>אנחנו מזהים עסקים עם פוטנציאל, רואים בדיוק איך לקדם אותם — ופונים אליהם ראשונים.</p>
+        </div>
+        <div class="about-item rev d2">
+          <h4>מחיר שמאפשר לצמוח</h4>
+          <p>דף נחיתה חינם, אתר תדמית במחיר נגיש. כי עסק קטן לא צריך לבחור בין שיווק לבין הישרדות.</p>
+        </div>
+        <div class="about-item rev d3">
+          <h4>שבוע ואתה ברשת</h4>
+          <p>מהרגע ששלחת את כל הפרטים — האתר שלך עולה לאוויר תוך 7 ימי עסקים.</p>
+        </div>
+      </div>
+      <div class="about-stats rev d2">
+        <div class="stat-card">
+          <div class="stat-n">7</div>
+          <div class="stat-l">ימי עסקים עד עלייה לאוויר</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-n">100%</div>
+          <div class="stat-l">שביעות רצון</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-n">ישראל</div>
+          <div class="stat-l">רק עסקים מקומיים</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="s-divider"></div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="s-inner">
+    <div class="s-num rev">02</div>
+    <h2 class="s-title rev d1"><strong>בונים לך נוכחות דיגיטלית</strong><br>שמדברת בשבילך.</h2>
+    <p class="s-sub rev d2">שני מסלולים — בחר את מה שמתאים לך, אנחנו מטפלים בשאר.</p>
+
+    <div class="srv-grid">
+      <div class="srv-card rev">
+        <div class="srv-label">הכי מבוקש</div>
+        <h3><strong>דף נחיתה</strong></h3>
+        <p>דף מקצועי שמציג את העסק שלך, גורם ללקוחות ליצור קשר ומקדם אותך ברשת.</p>
+        <div class="srv-prices">
+          <div class="srv-price-row">
+            <span class="srv-price-label">בניה</span>
+            <span class="srv-price-val">0 ₪</span>
+          </div>
+          <div class="srv-price-row">
+            <span class="srv-price-label">תחזוקה חודשית</span>
+            <span class="srv-price-val">250 ₪ <span class="srv-price-sub">/ חודש · 12 חודשים</span></span>
+          </div>
+        </div>
+        <div class="srv-maint-detail">התחזוקה כוללת: שינויים ועדכונים פעם בחודש, עדכון מוצרים ותכנים, ובדיקות תקינות שוטפות.</div>
+        <ul class="srv-features">
+          <li>עיצוב מותאם אישית לעסק</li>
+          <li>מותאם לנייד ולמחשב</li>
+          <li>עולה לאוויר תוך 7 ימי עסקים</li>
+          <li>עדכונים ושינויים פעם בחודש</li>
+        </ul>
+      </div>
+      <div class="srv-card rev d1">
+        <div class="srv-label">אתר מלא</div>
+        <h3><strong>אתר תדמית</strong></h3>
+        <p>אתר מלא עם מספר עמודים, סיפור העסק, גלריה וצור קשר — כל מה שעסק מודרני צריך.</p>
+        <div class="srv-prices">
+          <div class="srv-price-row">
+            <span class="srv-price-label">בניה</span>
+            <span class="srv-price-val">1,500 ₪</span>
+          </div>
+          <div class="srv-price-row">
+            <span class="srv-price-label">תחזוקה חודשית</span>
+            <span class="srv-price-val">400 ₪ <span class="srv-price-sub">/ חודש · 12 חודשים</span></span>
+          </div>
+        </div>
+        <div class="srv-maint-detail">התחזוקה כוללת: שינויים ועדכונים פעם בחודש, עדכון מוצרים ותכנים, ובדיקות תקינות שוטפות.</div>
+        <ul class="srv-features">
+          <li>עד 5 עמודים מלאים</li>
+          <li>עיצוב מותאם אישית</li>
+          <li>מותאם לכל מכשיר</li>
+          <li>עדכונים ושינויים פעם בחודש</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="s-divider"></div>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="s-inner">
+    <div class="s-num rev">03</div>
+    <h2 class="s-title rev d1"><strong>שלושה שלבים</strong> — ואתה ברשת.</h2>
+    <p class="s-sub rev d2">מהרגע שיצרת קשר ועד שהאתר שלך עולה לאוויר — אנחנו מטפלים בהכל.</p>
+
+    <div class="proc-timeline rev d1">
+      <div class="proc-line"></div>
+      <div class="proc-dot active"><span>01</span></div>
+      <div class="proc-dot"><span>02</span></div>
+      <div class="proc-dot"><span>03</span></div>
+    </div>
+    <div class="proc-grid">
+      <div class="proc-step rev">
+        <h4>יצירת קשר</h4>
+        <p>שולח לנו הודעה, נשמע עליך ועל העסק.</p>
+      </div>
+      <div class="proc-step rev d1">
+        <h4>שליחת פרטים</h4>
+        <p>שולח לנו את כל הפרטים והתכנים — אנחנו מטפלים בשאר.</p>
+      </div>
+      <div class="proc-step rev d2">
+        <h4>עולה לאוויר</h4>
+        <p>תוך 7 ימי עסקים האתר / דף הנחיתה שלך חי ברשת.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="s-divider"></div>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="s-inner">
+    <div class="s-num rev">04</div>
+    <h2 class="s-title rev d1"><strong>עבודות שמדברות</strong> בשבילנו.</h2>
+    <p class="s-sub rev d2">כל פרויקט נבנה מאפס, מותאם לעסק ולקהל שלו — וזה רק חלק קטן מהעבודות שלנו.</p>
+
+    <div class="port-grid">
+      <a href="https://chuna-botanica.pages.dev" target="_blank" class="port-card rev">
+        <div class="port-thumb" style="background:linear-gradient(135deg,#e8f0e8,#d4e8d4);align-items:center;justify-content:center">
+          <img src="chuna.jpg" alt="Chuna Botanica" style="max-height:160px;max-width:85%;object-fit:contain">
+        </div>
+        <div class="port-info">
+          <span class="port-tag">דף נחיתה</span>
+          <span class="port-arrow">↗</span>
+        </div>
+      </a>
+      <div class="port-card rev d1" style="opacity:.45;pointer-events:none">
+        <div class="port-thumb">
+          <div class="port-thumb-num">02</div>
+          <h4 class="ph">בקרוב</h4>
+          <p class="ph">פרויקט חדש בדרך</p>
+        </div>
+        <div class="port-info">
+          <span class="port-tag ph">—</span>
+        </div>
+      </div>
+      <div class="port-card rev d2" style="opacity:.45;pointer-events:none">
+        <div class="port-thumb">
+          <div class="port-thumb-num">03</div>
+          <h4 class="ph">בקרוב</h4>
+          <p class="ph">פרויקט חדש בדרך</p>
+        </div>
+        <div class="port-info">
+          <span class="port-tag ph">—</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="s-divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="s-inner">
+    <div class="s-num rev">05</div>
+    <div class="ct-grid">
+      <div>
+        <h2 class="ct-title rev d1"><strong>מוכן להתחיל?</strong><br>בוא נדבר.</h2>
+        <p class="ct-sub rev d2">מלא את הפרטים — נחזור אליך תוך שעה ונשמע על העסק שלך.</p>
+        <div class="ct-details rev d3">
+          <div class="ct-detail-item">
+            <span class="ct-detail-label">טלפון</span>
+            <a href="tel:0505134567" class="ct-detail-val">050-513-4567</a>
+          </div>
+          <div class="ct-detail-item">
+            <span class="ct-detail-label">שעות פעילות</span>
+            <span class="ct-detail-val">א׳–ה׳ · 9:00–20:00</span>
+          </div>
+          <div class="ct-detail-item">
+            <span class="ct-detail-label">עלייה לאוויר</span>
+            <span class="ct-detail-val">7 ימי עסקים</span>
+          </div>
+        </div>
+      </div>
+      <div class="ct-form rev d2">
+        <div class="ct-form-row">
+          <div class="ct-field">
+            <label>שם פרטי</label>
+            <input type="text" id="fname" placeholder="ישראל">
+          </div>
+          <div class="ct-field">
+            <label>שם משפחה</label>
+            <input type="text" id="lname" placeholder="ישראלי">
+          </div>
+        </div>
+        <div class="ct-field">
+          <label>טלפון</label>
+          <input type="tel" id="phone" placeholder="050-000-0000">
+        </div>
+        <div class="ct-field">
+          <label>ספר לנו על העסק שלך</label>
+          <textarea id="about" rows="4" placeholder="מה העסק עושה, מה אתה צריך..."></textarea>
+        </div>
+        <button class="ct-submit" onclick="sendWhatsApp()">שלח לווצאפ ←</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="f-logo">BOLDEVO</a>
+  <p>© 2026 Boldevo · כל הזכויות שמורות</p>
+  <div class="f-links">
+    <a href="#" onclick="openModal('acc');return false">הצהרת נגישות</a>
+    <a href="#" onclick="openModal('privacy');return false">מדיניות פרטיות</a>
+    <a href="#" onclick="openModal('terms');return false">תנאי שימוש</a>
+    <a href="https://wa.me/972505134567">050-513-4567</a>
+  </div>
+</footer>
+
+<!-- MODAL: נגישות -->
+<div id="modal-acc" class="modal-overlay" onclick="if(event.target===this)closeModal('acc')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('acc')">✕</button>
+    <h2>הצהרת נגישות</h2>
+    <p>Boldevo מחויבת להנגשת האתר לכלל המשתמשים, לרבות אנשים עם מוגבלות, בהתאם לחוק שוויון זכויות לאנשים עם מוגבלות (תשנ"ח-1998) ותקנות הנגישות לשירות (תשע"ג-2013).</p>
+    <h3>רמת הנגישות</h3>
+    <p>האתר עומד ברמת AA של תקן WCAG 2.1 ובתקן הישראלי ת"י 5568. האתר תומך בניווט מקלדת, קוראי מסך, הגדלת טקסט וניגודיות גבוהה.</p>
+    <h3>נתקלת בבעיה?</h3>
+    <p>אם נתקלת בתקלת נגישות או זקוק לסיוע, נשמח לעזור.<br>טלפון: <a href="tel:0505134567">050-513-4567</a> · WhatsApp: <a href="https://wa.me/972505134567">לחץ כאן</a></p>
+    <p>אנו מתחייבים לטפל בפניות נגישות תוך 5 ימי עסקים.</p>
+    <p style="color:rgba(0,0,0,.35);font-size:.75rem;margin-top:1.5rem">עדכון אחרון: אפריל 2026</p>
+  </div>
+</div>
+
+<!-- MODAL: פרטיות -->
+<div id="modal-privacy" class="modal-overlay" onclick="if(event.target===this)closeModal('privacy')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('privacy')">✕</button>
+    <h2>מדיניות פרטיות</h2>
+    <p>Boldevo ("אנחנו") מכבדת את פרטיות המשתמשים באתר boldevo.org. מסמך זה מסביר אילו פרטים נאספים ואיך הם משמשים.</p>
+    <h3>מידע שנאסף</h3>
+    <p>בעת מילוי טופס יצירת הקשר: שם, מספר טלפון ותיאור העסק. המידע מועבר ישירות דרך WhatsApp ואינו נשמר בשרתינו.</p>
+    <h3>שימוש במידע</h3>
+    <p>המידע משמש לצורך חזרה אליך בלבד. איננו מעבירים את פרטיך לצד שלישי כלשהו.</p>
+    <h3>עוגיות (Cookies)</h3>
+    <p>האתר עשוי להשתמש בעוגיות טכניות בלבד לצורך תפעול תקין. איננו משתמשים בעוגיות שיווקיות.</p>
+    <h3>יצירת קשר</h3>
+    <p>לשאלות בנושא פרטיות: <a href="https://wa.me/972505134567">WhatsApp</a> · <a href="tel:0505134567">050-513-4567</a></p>
+    <p style="color:rgba(0,0,0,.35);font-size:.75rem;margin-top:1.5rem">עדכון אחרון: אפריל 2026</p>
+  </div>
+</div>
+
+<!-- MODAL: תנאי שימוש -->
+<div id="modal-terms" class="modal-overlay" onclick="if(event.target===this)closeModal('terms')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('terms')">✕</button>
+    <h2>תנאי שימוש</h2>
+    <p>השימוש באתר boldevo.org מהווה הסכמה לתנאים הבאים.</p>
+    <h3>השירותים שלנו</h3>
+    <p>Boldevo מציעה שירותי בניית אתרים ודפי נחיתה לעסקים. כל עבודה מבוצעת בהתאם להסכם שנחתם בין הצדדים.</p>
+    <h3>קניין רוחני</h3>
+    <p>כל תכני האתר — טקסטים, עיצוב, קוד — שייכים ל-Boldevo. אין לעשות בהם שימוש ללא אישור בכתב.</p>
+    <h3>אחריות</h3>
+    <p>Boldevo אינה אחראית לנזקים שנגרמו כתוצאה משימוש באתר. המידע מוצג כפי שהוא (as-is).</p>
+    <h3>שינויים בתנאים</h3>
+    <p>אנו שומרים את הזכות לשנות תנאים אלו בכל עת. המשך השימוש באתר מהווה הסכמה לתנאים המעודכנים.</p>
+    <h3>יצירת קשר</h3>
+    <p><a href="https://wa.me/972505134567">WhatsApp</a> · <a href="tel:0505134567">050-513-4567</a></p>
+    <p style="color:rgba(0,0,0,.35);font-size:.75rem;margin-top:1.5rem">עדכון אחרון: אפריל 2026</p>
+  </div>
+</div>
+
+
+<!-- WEBGL SHADERS -->
+<script id="vs" type="x-shader/x-vertex">
+attribute vec2 position;
+void main(){gl_Position=vec4(position,0.0,1.0);}
+</script>
+<script id="fs" type="x-shader/x-fragment">
+precision highp float;
+uniform float uTime;uniform vec2 uResolution;uniform vec2 uMouse;
+#define PI 3.14159265359
+#define TAU 6.28318530718
+#define MAX_STEPS 80
+#define MAX_DIST 50.0
+#define SURF_DIST 0.001
+float hash(float n){return fract(sin(n)*43758.5453123);}
+mat2 rot(float a){float s=sin(a);float c=cos(a);return mat2(c,-s,s,c);}
+float sdOctahedron(vec3 p,float s){p=abs(p);float m=p.x+p.y+p.z-s;vec3 q;if(3.0*p.x<m)q=p.xyz;else if(3.0*p.y<m)q=p.yzx;else if(3.0*p.z<m)q=p.zxy;else return m*0.57735027;float k=clamp(0.5*(q.z-q.y+s),0.0,s);return length(vec3(q.x,q.y-s+k,q.z-k));}
+float sdTriPrism(vec3 p,vec2 h){vec3 q=abs(p);return max(q.z-h.y,max(q.x*0.866025+p.y*0.5,-p.y)-h.x*0.5);}
+float smin(float a,float b,float k){float h=clamp(0.5+0.5*(b-a)/k,0.0,1.0);return mix(b,a,h)-k*h*(1.0-h);}
+float smax(float a,float b,float k){return -smin(-a,-b,k);}
+float map(vec3 p){vec2 m=(uMouse-0.5)*2.5;p.xy+=m*0.4;p.xz*=rot(uTime*0.12);p.xy*=rot(uTime*0.08);vec3 p1=p;p1.yz*=rot(uTime*0.15);float cd=sin(p1.x*3.0+uTime)*sin(p1.y*3.0+uTime)*sin(p1.z*3.0+uTime)*0.1;float core=sdOctahedron(p1,1.6)+cd;vec3 p2=p1;p2.xy*=rot(PI*0.25+uTime*0.2);float prism=sdTriPrism(p2,vec2(1.4,2.0));core=smax(core,-prism,0.2);float d=core;float kb=0.2+0.15*(0.5+0.5*sin(uTime*1.5));for(int i=0;i<4;i++){float fi=float(i);float angle=fi*TAU/4.0+uTime*0.3;float radius=3.0+0.3*sin(uTime*0.4+fi);vec3 pos=vec3(cos(angle)*radius,sin(angle*0.7)*1.0,sin(angle)*radius);vec3 po=p-pos;po.xy*=rot(uTime*0.5+fi);float sd=sin(po.x*5.0+fi)*sin(po.y*5.0+fi)*sin(po.z*5.0+fi)*0.05;float sat=sdOctahedron(po,0.4)+sd;d=smin(d,sat,kb);}return d;}
+vec3 getNormal(vec3 p){vec2 e=vec2(0.001,0.0);return normalize(vec3(map(p+e.xyy)-map(p-e.xyy),map(p+e.yxy)-map(p-e.yxy),map(p+e.yyx)-map(p-e.yyx)));}
+float raymarch(vec3 ro,vec3 rd){float t=0.0;for(int i=0;i<MAX_STEPS;i++){vec3 p=ro+rd*t;float d=map(p);if(abs(d)<SURF_DIST||t>MAX_DIST)break;t+=d*0.7;}return t;}
+vec3 getBg(vec3 rd){float s=0.0;vec3 p=rd*100.0;float h=hash(dot(p,vec3(12.9898,78.233,54.53)));if(h>0.98)s=pow(h-0.98,10.0)*20.0;vec3 n=vec3(0.0);n+=vec3(0.3,0.15,0.5)*pow(max(0.0,sin(rd.x*2.0+uTime*0.1)),3.0)*0.2;n+=vec3(0.15,0.3,0.6)*pow(max(0.0,sin(rd.y*2.5+uTime*0.05)),3.0)*0.2;return s+n;}
+void main(){
+  vec2 uv=(gl_FragCoord.xy-0.5*uResolution)/min(uResolution.x,uResolution.y);
+  vec2 m=(uMouse-0.5)*0.5;
+  vec3 ro=vec3(m.x*2.0,m.y*2.0,5.5);
+  vec3 rd=normalize(vec3(uv,-1.0));
+  rd.xy*=rot(m.x*0.2);rd.yz*=rot(m.y*0.2);
+  float t=raymarch(ro,rd);
+  vec3 color=vec3(0.0);
+  if(t<MAX_DIST){
+    vec3 p=ro+rd*t;vec3 n=getNormal(p);vec3 v=normalize(ro-p);
+    float fr=pow(1.0-max(dot(v,n),0.0),3.0);
+    float ior=1.5;vec3 rf=refract(rd,n,1.0/ior);
+    if(length(rf)>0.0){
+      float t2=raymarch(p-n*0.01,rf);
+      if(t2<MAX_DIST){
+        vec3 p2=p-n*0.01+rf*t2;vec3 n2=getNormal(p2);
+        vec3 r=refract(rf,-n2,ior-0.2);vec3 g=refract(rf,-n2,ior);vec3 b=refract(rf,-n2,ior+0.2);
+        color=vec3(getBg(r).x*1.4,getBg(g).y*1.4,getBg(b).z*1.4);
+        color=pow(color,vec3(0.7))*5.0;
+      }else{color=getBg(rf)*2.0;}
+    }
+    vec3 ld=normalize(vec3(1.0,1.0,-1.0));vec3 hd=normalize(ld+v);
+    float spec=pow(max(dot(n,hd),0.0),150.0);color+=spec*3.5;
+    vec3 fc=vec3(0.5+0.5*sin(fr*TAU+uTime),0.5+0.5*sin(fr*TAU+uTime+TAU/3.0),0.5+0.5*sin(fr*TAU+uTime+TAU*2.0/3.0));
+    color+=fr*fc*1.2;
+    color+=pow(1.0-abs(dot(v,n)),4.0)*vec3(0.6,0.7,1.0)*0.7;
+    color+=pow(max(dot(-n,ld),0.0),2.0)*vec3(1.0,0.6,0.8)*0.5;
+  }else{color=getBg(rd);}
+  float vg=smoothstep(0.3,1.0,1.0-length(uv)*0.4);
+  color*=vg;color*=vec3(0.96,0.99,1.06);color=pow(color,vec3(0.88))*1.12;
+  gl_FragColor=vec4(color,1.0);
+}
+</script>
+<script>
+// WebGL
+const cv=document.getElementById('canvas');
+const gl=cv.getContext('webgl',{antialias:true,powerPreference:'high-performance'})||cv.getContext('experimental-webgl',{antialias:true});
+function resize(){const dpr=Math.min(window.devicePixelRatio||1,2);cv.width=window.innerWidth*dpr;cv.height=window.innerHeight*dpr;cv.style.width=window.innerWidth+'px';cv.style.height=window.innerHeight+'px';gl.viewport(0,0,cv.width,cv.height);}
+resize();window.addEventListener('resize',resize);
+function mkShader(t,src){const s=gl.createShader(t);gl.shaderSource(s,src);gl.compileShader(s);return s;}
+function mkProg(vs,fs){const p=gl.createProgram();gl.attachShader(p,vs);gl.attachShader(p,fs);gl.linkProgram(p);return p;}
+const prog=mkProg(mkShader(gl.VERTEX_SHADER,document.getElementById('vs').textContent),mkShader(gl.FRAGMENT_SHADER,document.getElementById('fs').textContent));
+const uT=gl.getUniformLocation(prog,'uTime'),uR=gl.getUniformLocation(prog,'uResolution'),uM=gl.getUniformLocation(prog,'uMouse');
+const buf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+const mouse={x:.5,y:.5,tx:.5,ty:.5};
+window.addEventListener('mousemove',e=>{mouse.tx=e.clientX/cv.width;mouse.ty=1-e.clientY/cv.height;});
+const t0=Date.now();
+(function render(){
+  const t=(Date.now()-t0)*.001;
+  mouse.x+=(mouse.tx-mouse.x)*.05;mouse.y+=(mouse.ty-mouse.y)*.05;
+  gl.clear(gl.COLOR_BUFFER_BIT);gl.useProgram(prog);
+  gl.uniform1f(uT,t);gl.uniform2f(uR,cv.width,cv.height);gl.uniform2f(uM,mouse.x,mouse.y);
+  const pos=gl.getAttribLocation(prog,'position');
+  gl.enableVertexAttribArray(pos);gl.bindBuffer(gl.ARRAY_BUFFER,buf);gl.vertexAttribPointer(pos,2,gl.FLOAT,false,0,0);
+  gl.drawArrays(gl.TRIANGLE_STRIP,0,4);requestAnimationFrame(render);
+})();
+
+// Modals
+function toggleMenu(){const m=document.getElementById('mobileMenu');const h=document.getElementById('hamburger');m.classList.toggle('open');h.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':'';}
+function openModal(id){document.getElementById('modal-'+id).classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(id){document.getElementById('modal-'+id).classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.modal-overlay.open').forEach(m=>m.classList.remove('open'))});
+
+// WhatsApp form
+function sendWhatsApp(){
+  const fname=document.getElementById('fname').value.trim();
+  const lname=document.getElementById('lname').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const about=document.getElementById('about').value.trim();
+  if(!fname||!phone){alert('נא למלא שם וטלפון');return;}
+  const msg=`היי Boldevo!\n\nשם: ${fname} ${lname}\nטלפון: ${phone}\nעל העסק: ${about||'—'}`;
+  window.open('https://wa.me/972505134567?text='+encodeURIComponent(msg),'_blank');
+}
+
+// Scroll reveal
+document.querySelectorAll('.rev').forEach(r=>{
+  new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.08}).observe(r);
+});
+</script>
+<script>
+  (function(d){
+    var s = d.createElement("script");
+    s.setAttribute("data-account", "zFad4YBPMG");
+    s.setAttribute("src", "https://cdn.userway.org/widget.js");
+    s.setAttribute("data-position", "3");
+    (d.body || d.head).appendChild(s);
+  })(document);
+</script>
+</body>
+</html>
