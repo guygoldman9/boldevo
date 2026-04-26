@@ -508,7 +508,7 @@ footer p{font-size:.72rem;font-weight:300;color:rgba(0,0,0,.3);letter-spacing:.0
           <label>ספר לנו על העסק שלך</label>
           <textarea id="about" rows="4" placeholder="מה העסק עושה, מה אתה צריך..."></textarea>
         </div>
-        <a id="wa-btn" href="https://wa.me/972505134567" target="_blank" rel="noopener" class="ct-submit" onclick="var f=document.getElementById('fname').value||'';var l=document.getElementById('lname').value||'';var p=document.getElementById('phone').value||'';var ab=document.getElementById('about').value||'—';if(!f||!p){alert('נא למלא שם וטלפון');return false;}var msg='היי Boldevo!%0A%0Aשם: '+encodeURIComponent(f+' '+l)+'%0Aטלפון: '+encodeURIComponent(p)+'%0Aעל העסק: '+encodeURIComponent(ab);this.href='https://wa.me/972505134567?text='+msg;">שלח לווצאפ ←</a>
+        <button class="ct-submit" onclick="event.preventDefault();var f=document.getElementById('fname').value.trim();var l=document.getElementById('lname').value.trim();var p=document.getElementById('phone').value.trim();var ab=document.getElementById('about').value.trim();if(!f||!p){alert('נא למלא שם וטלפון');return;}var msg='היי Boldevo!%0Aשם: '+f+'%20'+l+'%0Aטלפון: '+p+'%0Aעסק: '+ab;window.location.href='https://wa.me/972505134567?text='+msg;" type="button">שלח לווצאפ ←</button>
       </div>
     </div>
   </div>
