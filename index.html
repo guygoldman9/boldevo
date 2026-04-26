@@ -508,7 +508,7 @@ footer p{font-size:.72rem;font-weight:300;color:rgba(0,0,0,.3);letter-spacing:.0
           <label>ספר לנו על העסק שלך</label>
           <textarea id="about" rows="4" placeholder="מה העסק עושה, מה אתה צריך..."></textarea>
         </div>
-        <button class="ct-submit" onclick="event.preventDefault();var f=document.getElementById('fname').value.trim();var l=document.getElementById('lname').value.trim();var p=document.getElementById('phone').value.trim();var ab=document.getElementById('about').value.trim();if(!f||!p){alert('נא למלא שם וטלפון');return;}var msg='היי Boldevo!%0Aשם: '+f+'%20'+l+'%0Aטלפון: '+p+'%0Aעסק: '+ab;window.location.href='https://wa.me/972505134567?text='+msg;" type="button">שלח לווצאפ ←</button>
+        <button class="ct-submit" type="button" onclick="var f=document.getElementById('fname').value.trim(),l=document.getElementById('lname').value.trim(),p=document.getElementById('phone').value.trim(),ab=document.getElementById('about').value.trim();if(!f||!p){alert('נא למלא שם וטלפון');return;}var msg=encodeURIComponent('היי Boldevo!\nשם: '+f+' '+l+'\nטלפון: '+p+'\nעסק: '+(ab||'—'));window.location.href='whatsapp://send?phone=972505134567&text='+msg;">שלח לווצאפ ←</button>
       </div>
     </div>
   </div>
