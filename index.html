@@ -674,7 +674,13 @@ function sendWhatsApp(){
   const about=document.getElementById('about').value.trim();
   if(!fname||!phone){alert('נא למלא שם וטלפון');return;}
   const msg=`היי Boldevo!\n\nשם: ${fname} ${lname}\nטלפון: ${phone}\nעל העסק: ${about||'—'}`;
-  window.open('https://wa.me/972505134567?text='+encodeURIComponent(msg),'_blank');
+  const a=document.createElement('a');
+  a.href='https://wa.me/972505134567?text='+encodeURIComponent(msg);
+  a.target='_blank';
+  a.rel='noopener noreferrer';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 }
 
 // Scroll reveal
