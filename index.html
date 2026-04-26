@@ -508,7 +508,7 @@ footer p{font-size:.72rem;font-weight:300;color:rgba(0,0,0,.3);letter-spacing:.0
           <label>ספר לנו על העסק שלך</label>
           <textarea id="about" rows="4" placeholder="מה העסק עושה, מה אתה צריך..."></textarea>
         </div>
-        <button class="ct-submit" onclick="sendWhatsApp()">שלח לווצאפ ←</button>
+        <a id="wa-btn" href="#" class="ct-submit" onclick="return buildWA(this)">שלח לווצאפ ←</a>
       </div>
     </div>
   </div>
@@ -667,14 +667,16 @@ function closeModal(id){document.getElementById('modal-'+id).classList.remove('o
 document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.modal-overlay.open').forEach(m=>m.classList.remove('open'))});
 
 // WhatsApp form
-function sendWhatsApp(){
+function buildWA(el){
   const fname=document.getElementById('fname').value.trim();
   const lname=document.getElementById('lname').value.trim();
   const phone=document.getElementById('phone').value.trim();
   const about=document.getElementById('about').value.trim();
-  if(!fname||!phone){alert('נא למלא שם וטלפון');return;}
+  if(!fname||!phone){alert('נא למלא שם וטלפון');return false;}
   const msg=`היי Boldevo!\n\nשם: ${fname} ${lname}\nטלפון: ${phone}\nעל העסק: ${about||'—'}`;
-  window.location.href='https://wa.me/972505134567?text='+encodeURIComponent(msg);
+  el.href='https://wa.me/972505134567?text='+encodeURIComponent(msg);
+  el.target='_blank';
+  return true;
 }
 
 // Scroll reveal
